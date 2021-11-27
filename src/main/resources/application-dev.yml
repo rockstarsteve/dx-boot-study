@@ -1,0 +1,8 @@
+
+
+
+swagger:
+  basic:
+    enable: true
+    username: admin
+    password: 123456
