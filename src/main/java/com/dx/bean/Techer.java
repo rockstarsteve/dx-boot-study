@@ -1,4 +1,4 @@
-package com.dx.swagger.bean;
+package com.dx.bean;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Description:
  *
- * @author yaojian
+ * @author rockstarsteve
  * @version 1.0
  * @copyright Copyright (c) 文理电信
  * @since 2021/11/27
@@ -24,10 +24,8 @@ public class Techer {
 
     @ApiModelProperty(value = "老师名称", notes = "这个字段是老师名称")
     private String name;
-
     @ApiModelProperty(value = "老师的所教科目", notes = "这个字段是老师所教科目")
     private String subject;
 
     List<Student> studentList;
-
 }

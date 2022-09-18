@@ -1,4 +1,4 @@
-package com.dx.swagger.config;
+package com.dx.config;
 
 import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.springframework.context.annotation.Bean;
@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * Description: Swagger配置
  *
- * @author yaojian
+ * @author rockstarsteve
  * @version 1.0
  * @copyright Copyright (c) 文理电信
  * @since 2021/11/27

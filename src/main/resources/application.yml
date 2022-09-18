@@ -5,3 +5,8 @@ server:
 spring:
   profiles:
     active: dev
+
+  # 文件上传设置大小
+  servlet:
+    multipart:
+      max-file-size: 100MB

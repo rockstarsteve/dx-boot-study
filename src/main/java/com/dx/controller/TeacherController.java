@@ -1,7 +1,7 @@
-package com.dx.swagger.controller;
+package com.dx.controller;
 
-import com.dx.swagger.bean.Student;
-import com.dx.swagger.bean.Techer;
+import com.dx.bean.Student;
+import com.dx.bean.Techer;
 import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Description:
  *
- * @author yaojian
+ * @author rockstarsteve
  * @version 1.0
  * @copyright Copyright (c) 文理电信
  * @since 2021/11/27
@@ -23,9 +23,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/teacher")
 @ApiSort(1)
-public class TeacherSwaggerController {
+public class TeacherController {
 
-    @ApiOperation(value = "测试老师", notes = "查询当个老师信息",response = Techer.class)
+    @ApiOperation(value = "测试老师", notes = "查询当个老师信息", response = Techer.class)
     @ApiImplicitParams(
             value =
                     {
@@ -39,6 +39,7 @@ public class TeacherSwaggerController {
                     @ApiResponse(code = 555, message = "乱七八糟的")
             }
     )
+    @ApiOperationSupport(order = 1)
     @PostMapping(value = "/select")
     public Techer select(@RequestBody Techer techer) {
 
@@ -49,6 +50,18 @@ public class TeacherSwaggerController {
         Techer techer1 = new Techer(techer.getName(), techer.getSubject(), studentList);
 
         return techer1;
+    }
+
+    /**
+     * 自定义测试方法
+     */
+    @ApiOperation(value = "自定义测试方法", notes = "", response = Object.class)
+    @ApiOperationSupport(order = 2)
+    @PostMapping(value = "/test")
+    public Object test() {
+
+
+        return "ok";
     }
 
 }

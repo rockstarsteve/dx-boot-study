@@ -3,6 +3,6 @@
 
 swagger:
   basic:
-    enable: true
+    enable: false
     username: admin
-    password: 123456
+    password: admin
